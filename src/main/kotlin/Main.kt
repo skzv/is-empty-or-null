@@ -8,9 +8,7 @@ fun main(args: Array<String>) {
     s3.isEmptyOrNull() eq false
 }
 
-fun String?.isEmptyOrNull() : Boolean {
-    return (this == null) || this.length == 0;
-}
+fun String?.isEmptyOrNull() = (this == null) || this.length == 0
 
 infix fun <T> T.eq(other: T) {
     if (this == other) println("OK")
